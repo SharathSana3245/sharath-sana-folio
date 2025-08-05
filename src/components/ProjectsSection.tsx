@@ -5,12 +5,12 @@ import { Calendar, Building } from "lucide-react";
 export const ProjectsSection = () => {
   const projects = [
     {
-      title: "M365 Pages",
+      title: "M365 Admin and Guide pages",
       company: "Tech Mahindra",
       client: "Microsoft",
       period: "Dec 2023 - Present",
       description: "Working on Microsoft 365 web platform development, focusing on modern frontend architecture and user experience optimization.",
-      technologies: ["React", "TypeScript", "Microsoft Graph API"],
+      technologies: ["React", "TypeScript", "Fluent UI"],
       status: "ongoing"
     },
     {

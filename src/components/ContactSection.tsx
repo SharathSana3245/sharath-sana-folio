@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Github, Linkedin, Mail, Send, MapPin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 export const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -18,12 +19,25 @@ export const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
-    toast({
+    emailjs.send(
+    'service_rgbm58n',
+    'template_lmaeuna',
+    formData,
+    'K4halQA850qz8H1RG'
+  )
+  .then(() => {
+   toast({
       title: "Message sent!",
       description: "Thank you for reaching out. I'll get back to you soon.",
     });
-    setFormData({ name: "", email: "", subject: "", message: "" });
+   setFormData({ name: "", email: "", subject: "", message: "" });
+  })
+  .catch((error) => {
+    console.error('Failed to send message:', error);
+    alert('Oops! Something went wrong.');
+  });
+    
+    
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -43,13 +57,13 @@ export const ContactSection = () => {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "https://linkedin.com/in/sharathkumarsana",
+      href: "https://linkedin.com/in/sharathsanadev",
       color: "hover:text-tech-blue"
     },
     {
       icon: Mail,
       label: "Email",
-      href: "mailto:sharath@example.com",
+      href: "mailto:sharath.sana3245@gmail.com",
       color: "hover:text-tech-purple"
     }
   ];

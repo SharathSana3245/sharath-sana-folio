@@ -116,15 +116,15 @@ export const ExperienceSection = () => {
           {/* Career stats */}
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="text-2xl font-bold text-primary mb-1">4+</div>
-              <div className="text-sm text-muted-foreground">Years Experience</div>
+              <div className="text-2xl font-bold text-primary mb-1">around 5</div>
+              <div className="text-sm text-muted-foreground">Years of Experience</div>
             </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-tech-blue mb-1">3</div>
               <div className="text-sm text-muted-foreground">Companies</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-tech-purple mb-1">3</div>
+              <div className="text-2xl font-bold text-tech-purple mb-1">2</div>
               <div className="text-sm text-muted-foreground">Major Projects</div>
             </div>
             <div className="text-center">
